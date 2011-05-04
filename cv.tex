@@ -1,17 +1,16 @@
 \documentclass[11pt,a4paper]{moderncv}
 
 % moderncv themes
-% \moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{classic}                % idem
+\moderncvtheme[blue]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 
 % character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[utf8]{inputenc}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                      % if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+%\setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}} % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
 
 % personal data
 \firstname{Gastón}
@@ -19,39 +18,28 @@
 \title{Software Engineer}
 \address{}{Buenos Aires, Argentina}
 \phone{+54 11 4781 7018}
-\mobile{+54 911 6370 1275}                    % optional, remove the line if not wanted
-\email{gaston@gkleiman.com.ar}                % optional, remove the line if not wanted
-% \homepage{homepage (optional)}                % optional, remove the line if not wanted
-\extrainfo{Nationality: Argentine with German citizenship} % optional, remove the line if not wanted
-% \quote{Some quote (optional)}                 % optional, remove the line if not wanted
+\mobile{+54 911 6370 1275}
+\email{gaston@gkleiman.com.ar}
+% \homepage{homepage (optional)}
+\extrainfo{Nationality: Argentine with German citizenship}
+% \quote{Some quote (optional)}
 
-% to show numerical labels in the bibliography; only useful if you make citations in your resume
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
+\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
 
 \section{Education}
-\cventry{2003--2011}{MSc in Informatics Engineering}{FIUBA (Facultad de Ingeniería, Univerisdad de Buenos Aires)}{Argentina}{}{}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
-
-\section{Master thesis}
-\cvline{title}{\emph{Title}}
-\cvline{supervisors}{Supervisors}
-\cvline{description}{\small Short thesis abstract}
+\cventry{2003--2011}{MSc in Informatics Engineering}{Universidad de Buenos
+Aires}{Argentina}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2008 -- 2009\\ Sep \ \ \ \ \ Feb}{Research Project at the Institute of Operating
+Systems and Computer Networks}{Technische Universität
+Braunschweig}{Germany}{}{Description}
+\cventry{2001\\$4^{1/2}$ months}{Study Abroad}{Gymnasium
+Kaiser-Friedrich-Ufer}{Hamburg}{Germany}{Lived with a german family and
+attended school.}
 
 \section{Experience}
-\subsection{Vocational}
 \cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
 Detailed achievements:%
 \begin{itemize}%
@@ -59,29 +47,28 @@ Detailed achievements:%
 \item Achievement 2, with sub-achievements:
   \begin{itemize}%
   \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
   \item Sub-achievement (c);
   \end{itemize}
 \item Achievement 3.
 \end{itemize}}
 \cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
 \section{Languages}
-\cvlanguage{Language 1}{Skill level}{Comment}
-\cvlanguage{Language 2}{Skill level}{Comment}
-\cvlanguage{Language 3}{Skill level}{Comment}
+\cvlanguage{English}{Fluent}{First Certificate Exam (passed with grade A), Cambridge, 2001}
+\cvlanguage{German}{Fluent}{Deutsches Sprachdiplom der KMK Stufe II, 2002}
+\cvlanguage{Spanish}{Native}{}
 
 \section{Computer skills}
 \cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
 \cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
 \cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+
+\section{Contributions to Open-Source Projects}
+
+\section{Personal Projects (all of them Open Source)}
+
+\section{Awards}
 
 \section{Interests}
 \cvline{hobby 1}{\small Description}
@@ -95,26 +82,8 @@ Detailed achievements:%
 
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
 
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
+\cvlistdoubleitem{Item 2}{Item 4}
 \cvlistdoubleitem{Item 2}{Item 5 \cite{book1}}
 \cvlistdoubleitem{Item 3}{}
 
-% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}       % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
-
 \end{document}
-
-
-%% end of file `template_en.tex'.
