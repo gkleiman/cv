@@ -1,89 +1,222 @@
 \documentclass[11pt,a4paper]{moderncv}
 
 % moderncv themes
-\moderncvtheme[blue]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and
+% 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}
+
+% for web links
+\definecolor{href}{rgb}{0.2,0.4,0.65}
+\newcommand\weblink[2] {{\color{href} \href{#1}{#2}}}
+\newcommand\cvskill[2] {\cvline{#1}{
+\begin{minipage}[t]{%
+  \linewidth}\small #2
+\end{minipage}
+}}
 
 % character encoding
 \usepackage[utf8]{inputenc}
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm} % if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}} % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-%\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+\usepackage[scale=0.85]{geometry}
+% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+% only for the classic theme, if you want to change the width of your name
+% placeholder (to leave more space for your address details)
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
+% required when changes are made to page layout lengths
+\AtBeginDocument{\recomputelengths}
 
 % personal data
 \firstname{Gastón}
 \familyname{Kleiman}
 \title{Software Engineer}
-\address{}{Buenos Aires, Argentina}
+\address{Virrey Arredondo 2631 5A}{C1426DZI Capital Federal, Argentina}
 \phone{+54 11 4781 7018}
 \mobile{+54 911 6370 1275}
-\email{gaston@gkleiman.com.ar}
-% \homepage{homepage (optional)}
+\email{contact@gkleiman.com.ar}
+\homepage{http://github.com/gkleiman}
 \extrainfo{Nationality: Argentine with German citizenship}
 % \quote{Some quote (optional)}
 
-\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
+% uncomment to suppress automatic page numbering for CVs longer than one page
+
+\nopagenumbers{}
 
 \begin{document}
 \maketitle
 
+\section{Profile}
+Versatile \& pragmatic developer with strong theoretical knowledge and
+practical experience ranging from system programming in low--level languages to
+graphic and web applications in high--level languages. Highly interested in
+developing for mobile platforms (specially for Android).
+
+Proactive, self--taught, quick--learner, goal oriented. Able to work
+effectively both as part of small/big teams as well as alone on own motivation.
+Deep understanding and use of FLOSS (Free Libre Open Source Software)
+development methodologies and tools. Used to working under pressure and meeting
+demanding deadlines. Interested in project management, experience dealing with
+customers, doing the best to understand and satisfy their needs.
+
+\section{Professional Expertise}
+\begin{itemize}
+\item Deep web development knowledge, ranging from back--end programming in
+  Ruby, Java and PHP to front--end programming using JavaScript and HTML + CSS.
+  Knowledge of back--end frameworks (Rails, Tapestry) and front--end libraries
+  (jQuery, jQuery UI). Prefer back--end rather than front--end programming.
+\item Object--oriented design and programming.
+\item Strong practical knowledge of Ruby, Java, C++ and C.
+\item Concurrent and network programming, including POSIX threads, BSD sockets,
+  TCP/IP and POSIX IPC (Inter--Process Communication) experience.
+\item Experience teaching programming with Python and using it to make small
+  programs and utilities.
+\item GNU/Linux systems specialist. More than 10 years of experience as user
+  and administrator. Knowledge about its architecture, best--practices, shell
+  scripting,  and web (Apache 2, Tomcat) \& database (MySQL) servers
+  administration.
+\item Practical and theoretical knowledge of networking protocols (IP, TCP/IP,
+  UDP, etc.) and application protocols over IP (HTTP, SMTP, POP 3, DNS, etc.).
+\item Network administration: firewalling (iptables), advanced routing, NAT.
+\item Basic knowledge of the Android SDK and mobile programming.
+\end{itemize}
+
 \section{Education}
-\cventry{2003--2011}{MSc in Informatics Engineering}{Universidad de Buenos
-Aires}{Argentina}{}{}  % arguments 3 to 6 can be left empty
-\cventry{2008 -- 2009\\ Sep \ \ \ \ \ Feb}{Research Project at the Institute of Operating
-Systems and Computer Networks}{Technische Universität
-Braunschweig}{Germany}{}{Description}
+\cventry{2003 -- 2011}{MSc in Informatics Engineering}{Universidad de Buenos
+Aires}{Argentina}{}{Final Project:
+\weblink{https://github.com/gkleiman/wide}{wIDE} (Web Integrated Development
+Environment).}
+\cventry{2008 -- 2009\\ Sep \ \ \ \ \ Feb}{Research Project at the
+\weblink{http://www.ibr.cs.tu-bs.de/dus/index.html}{Institute of Distributed
+and Ubiquitous Systems}}{Technische Universität
+Braunschweig}{Germany}{}{Participated in a research project on collaborative
+transmission in wireless sensor networks using feedback based distributed
+adaptive beamforming.\\Simulated and evaluated different synchronisation and
+clustering approaches using MATLAB.}
 \cventry{2001\\$4^{1/2}$ months}{Study Abroad}{Gymnasium
-Kaiser-Friedrich-Ufer}{Hamburg}{Germany}{Lived with a german family and
+Kaiser-Friedrich-Ufer}{Hamburg}{Germany}{Lived with a German family and
 attended school.}
 
 \section{Experience}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
+\cvline{1999 -- now}{\textbf{Freelance Independent Software Engineer}. Working
+in projects such as small websites development.}
+\cventry{2009 -- 2010\\ Oct \ \ \ \ \ Jun}{Software Engineer}
+{\weblink{http://www.3dgames.com.ar}{3DGames}}{Buenos Aires, Argentina}{}{%
+\begin{itemize}
+  \item Migrated the web site of \weblink{http://club.speedy.com.ar}{Club
+    Speedy} (Membership Reward Program of one of the largest ISPs in Argentina)
+    from various PHP applications to a fully integrated site developed with
+    Ruby on Rails. Responsible of meetings with the client and of designing,
+    implementing and deploying the web site.
+  \item Participated in the implementation of a Single Sign--On solution for
+    the 3DG Platform (forum, blogs, news site, profiles, etc.) using the
+    Central Authentication Service
+    (\weblink{http://en.wikipedia.org/wiki/Central_Authentication_Service}{CAS})
+    protocol. Tools used:
+    \weblink{https://github.com/relevance/castronaut}{castronaut},
+    \weblink{https://wiki.jasig.org/display/CASC/phpCAS}{phpCAS}.
+  \item Installed and configured multiple GNU/Linux servers. Responsible for
+    emergency response in case of failures.
+  \item Participated in the hiring process interviewing candidates.
+\end{itemize}
+}
+%
+\cventry{2010}{Undergrad Teaching Assistant}
+{Universidad de Buenos Aires}{Buenos Aires, Argentina}{}{%
 \begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+  \item ``Algorithms and Programming I''
+    \begin{itemize}%
+      \item I/O, sorting and searching, big-O notation, basic data structures
+        (stack, queue, list), recursion, divide \& conquer algorithms,
+        introduction to OOP in Python.
+    \end{itemize}
+  \item ``Algorithms and Programming II''
+    \begin{itemize}%
+      \item C with dynamic memory management, advanced data structures (linked
+          list, hash, tree, heap, graph), advanced sorting algorithms
+          (Heapsort, Mergesort, Quicksort, Radixsort, etc.), algorithms design
+          techniques (backtracking, greedy algorithms and dynamic programming).
+    \end{itemize}
+\end{itemize}
+}
+%
+\cventry{2009\\ Jan -- Mar}{Research Assistant}
+{TU Braunschweig}{Braunschweig, Germany}{}{%
+Wrote an Installation and Basic Usage Guide for the Universal Software Radio
+Peripheral (\weblink{http://www.ettus.com/products}{USRP\texttrademark}) and
+GNU Radio.
+}
+%
+\cventry{2007 -- 2008\\ Jul \ \ \ \ \ Aug}{Java Developer / Consultant}
+{\weblink{http://www.newtechnologies.com.ar}{New Technologies S.R.L.}}{Buenos
+Aires, Argentina}{}{%
+Participated in a team developing Java applications, and
+worked as an internal and external consultant.
+\begin{itemize}
+  \item Member of a team involved in the development of a workflow based web
+    application to track and optimize the Procurement Process of the
+    \weblink{http://www.telefonica.com/}{``Grupo Telefónica''} in Argentina.
+    Tools used: jBPM, Tapestry, Spring, Hibernate, HttpUnit (for web scraping).
+  \item Implemented prototype applications on J2EE in order to evaluate the
+    adoption of different technologies (Tapestry, JavaServer Faces, Hibernate,
+    Spring and Mule).
+  \item Elaborated slides and examples to be used in technical talks.
+\end{itemize}
+}
+%
+\cventry{2007\\ Apr -- Jun}{Security Analyst}
+{\weblink{http://www.novared.cl/}{Novared S.A.} working at %
+\weblink{http://www.telecom.com.ar/}{Telecom Argentina S.A.}}{Buenos Aires,
+Argentina}{}{%
+Implemented the security product Novell Sentinel,  providing integrated
+monitoring of more than 200 devices, in order to improve Sarbanes--Oxley
+compliance.
+\begin{itemize}
+  \item Developed agents in Novell Sentinel's proprietary language.
+  \item Developed connectors responsible of collecting and transferring logs
+    and events from different services to the agents, using Perl, Bash and
+    J2SE.
+\end{itemize}
+}
+
+\section{Contributions to FLOSS Projects}
+\cvline{}{Contributed to popular FLOSS (Open--Source) projects including:}
+
+\cvlistdoubleitem{\mbox{\weblink{http://mercurial.selenic.com/}{Mercurial}}}{%
+\mbox{\weblink{http://ace.ajax.org/}{ACE (Ajax.org Text Editor)}}}
+\cvlistitem{\mbox{\weblink{http://github.com/fesplugas/typus}{Typus}}}
+
+\section{Personal Projects}
+\cvskill{\mbox{\weblink{https://github.com/gkleiman/wide}{wIDE}}\\2010 --
+now}{wIDE $[$Rails 3, jQuery, jQuery UI, delayed\_jobs, Mercurial, git$]$ is a
+web IDE that runs in the browser, but lives in a server. It was developed for
+the \weblink{http://labi.fi.uba.ar/club_robotica.html}{Robotics Club} of the
+Faculty of Engineering of the UBA, and allows them to edit and compile
+programs for different microcontroller architectures from anywhere, anytime. It
+allows the versioning of the projects using Mercurial.}
+\cvskill{\mbox{\weblink{http://yanf.sourceforge.net/}{yanf}}\\2001}{Yanf
+$[$C$]$ is a deprecated news fetcher coded by me, when I was 16 and web RSS
+readers were not popular. It was published under the GPL v2 license, but is no
+longer functional and is still available only for nostalgic reasons.}
 
 \section{Languages}
-\cvlanguage{English}{Fluent}{First Certificate Exam (passed with grade A), Cambridge, 2001}
-\cvlanguage{German}{Fluent}{Deutsches Sprachdiplom der KMK Stufe II, 2002}
 \cvlanguage{Spanish}{Native}{}
-
-\section{Computer skills}
-\cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-
-
-\section{Contributions to Open-Source Projects}
-
-\section{Personal Projects (all of them Open Source)}
+\cvlanguage{English}{Fluent}{First Certificate Exam (passed with grade A),
+Cambridge, 2001}
+\cvlanguage{German}{Fluent}{Deutsches Sprachdiplom der KMK Stufe II, 2002}
 
 \section{Awards}
+\cventry{2008}{ALEARG Scholarship}{}{granted by the German Academic Exchange
+Service (DAAD) to do research work at the TU Braunschweig}{Germany}{}{}{}{}
+\cventry{2001}{Argentine Chemistry Olympiads (OAQ)}{Bronze medal}{}{}{}{}
 
-\section{Interests}
-\cvline{hobby 1}{\small Description}
-\cvline{hobby 2}{\small Description}
-\cvline{hobby 3}{\small Description}
-
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem[+]{Item 3}            % optional other symbol
-
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-\cvlistdoubleitem{Item 2}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5 \cite{book1}}
-\cvlistdoubleitem{Item 3}{}
-
+\section{Hobbies}
+\cvlistitem{Travelling, active member of
+\weblink{http://couchsurfing.org}{CouchSurfing}, take almost any opportunity to
+travel.}
+\cvlistitem{Cooking.}
+\cvlistitem{Film Geek, owner of a large constantly growing library of movies.}
+\cvlistitem{Improving my development environment, constantly my favourite
+editor (Vim) and trying new tools.}
+\cvlistitem{Document composition with \LaTeX.}
 \end{document}
