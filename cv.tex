@@ -5,6 +5,9 @@
 % 'roman' (for roman fonts, instead of sans serif fonts)
 \moderncvtheme[blue]{classic}
 
+\setlength{\hintscolumnwidth}{0.17\textwidth}
+\recomputelengths
+
 % for web links
 \definecolor{href}{rgb}{0.2,0.4,0.65}
 \newcommand\weblink[2] {{\color{href} \href{#1}{#2}}}
@@ -32,11 +35,10 @@
 \familyname{Kleiman}
 \title{Software Engineer}
 \address{Virrey Arredondo 2631 5A}{C1426DZI Capital Federal, Argentina}
-\phone{+54 11 4781 7018}
 \mobile{+54 911 6370 1275}
-\email{contact@gkleiman.com.ar}
-\homepage{http://github.com/gkleiman}
-\extrainfo{Nationality: Argentine with German citizenship}
+\email{gaston.kleiman@gmail.com}
+\homepage{github.com/gkleiman}
+\extrainfo{Nationality: Argentine and German Citizenship}
 % \quote{Some quote (optional)}
 
 % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -45,45 +47,10 @@
 
 \begin{document}
 \maketitle
-
-\section{Profile}
-Versatile \& pragmatic developer with strong theoretical knowledge and
-practical experience ranging from system programming in low--level languages to
-graphic and web applications in high--level languages. Highly interested in
-developing for mobile platforms (specially for Android).
-
-Proactive, self--taught, quick--learner, goal oriented. Able to work
-effectively both as part of small/big teams as well as alone on own motivation.
-Deep understanding and use of FLOSS (Free Libre Open Source Software)
-development methodologies and tools. Used to working under pressure and meeting
-demanding deadlines. Interested in project management, experience dealing with
-customers, doing the best to understand and satisfy their needs.
-
-\section{Professional Expertise}
-\begin{itemize}
-\item Deep web development knowledge, ranging from back--end programming in
-Ruby, Java and PHP, to front--end programming using JavaScript and HTML + CSS.
-Knowledge of back--end frameworks (Rails, Tapestry) and front--end libraries
-(jQuery, jQuery UI). Prefer back--end rather than front--end programming.
-\item Object--oriented design and programming.
-\item Strong practical knowledge of Ruby, Java, C++ and C.
-\item Concurrent and network programming, including POSIX threads, BSD sockets,
-  TCP/IP and POSIX IPC (Inter--Process Communication) experience.
-\item Experience teaching programming with Python and using it to make small
-  programs and utilities.
-\item GNU/Linux systems specialist. More than 10 years of experience as user
-  and administrator. Knowledge about its architecture, best--practices, shell
-  scripting,  and web (Apache 2, Tomcat) \& database (MySQL) servers
-  administration.
-\item Practical and theoretical knowledge of networking protocols (IP, TCP/IP,
-  UDP, etc.) and application protocols over IP (HTTP, SMTP, POP 3, DNS, etc.).
-\item Network administration: firewalling (iptables), advanced routing, NAT.
-\item Basic knowledge of the Android SDK and mobile programming.
-\end{itemize}
-
+\vspace*{-2ex}
 \section{Education}
-\cventry{2003 -- 2011}{MSc in Informatics Engineering}{Universidad de Buenos
-Aires}{Argentina}{}{Final Project:
+\cventry{2003 -- 2011}{Informatics Engineering (6-year degree)}{Universidad de
+Buenos Aires}{Argentina}{}{Final Project:
 \weblink{https://github.com/gkleiman/wide}{wIDE} (Web Integrated Development
 Environment).}
 \cventry{2008 -- 2009\\ Sep \ \ \ \ \ Feb}{Research Project at the
@@ -91,15 +58,47 @@ Environment).}
 and Ubiquitous Systems}}{Technische Universität
 Braunschweig}{Germany}{}{Participated in a research project on collaborative
 transmission in wireless sensor networks using feedback based distributed
-adaptive beamforming.\\Simulated and evaluated different synchronisation and
+adaptive beamforming.\\Simulated and evaluated different synchronization and
 clustering approaches using MATLAB.}
 \cventry{2001\\$4^{1/2}$ months}{Study Abroad}{Gymnasium
 Kaiser-Friedrich-Ufer}{Hamburg}{Germany}{Lived with a German family and
 attended school.}
 
-\section{Experience}
-\cvline{1999 -- now}{\textbf{Freelance Independent Software Engineer}. Working
-in projects such as small websites development.}
+\section{Languages}
+\cvlanguage{English}{Fluent}{First Certificate Exam (passed with grade A),
+Cambridge, 2001}
+\cvlanguage{Spanish}{Native}{}
+\cvlanguage{German}{Fluent}{Deutsches Sprachdiplom der KMK Stufe II, 2002}
+
+\section{Professional Experience}
+\cvline{Jul 2012 -- current}{\textbf{Software Engineer (Contractor)},
+\emph{\weblink{http://linkedin.com}{LinkedIn}}}
+%
+\cventry{2012 -- 2012\\ May -- Jul}{Android Developer}
+{\weblink{http://etermax.com/}{Etermax S.A.}}{Buenos Aires, Argentina}{}{%
+  Short gig developing a game similar to
+  \weblink{https://play.google.com/store/apps/details?id=com.zynga.scramble}{Zynga's Scramble with Friends}
+}
+%
+\cventry{2011 -- 2012\\ Aug -- Apr}{Business Intelligence \& Data
+Warehouses - Corporate Engineering}
+{\weblink{http://www.google.com}{Google} (Vendor),
+\weblink{http://www.globant.com}{Globant}}{Buenos Aires, Argentina}{}{%
+\begin{itemize}
+  \item Develop ETL pipelines in Java for large scale datasets using
+proprietary distributed computing libraries (MapReduce) deployed on Google's
+cloud infrastructure.
+  \item Implement/Maintain several executive dashboards using proprietary
+JavaScript/AJAX data visualization libraries and Data Warehouses.
+  \item Maintain a real-time Python/Java Business Intelligence platform to
+monitor credit exposure and revenue risk.
+  \item Release management for the Financial Datawarehouse Pipelines.
+\end{itemize}
+}
+%
+\cvline{1999 -- current}{\textbf{Freelance Independent Software Engineer}.
+Working in projects such as small websites development.}
+%
 \cventry{2009 -- 2010\\ Oct \ \ \ \ \ Jun}{Software Engineer}
 {\weblink{http://www.3dgames.com.ar}{3DGames}}{Buenos Aires, Argentina}{}{%
 \begin{itemize}
@@ -109,8 +108,7 @@ in projects such as small websites development.}
     Ruby on Rails. Responsible of meetings with the client and of designing,
     implementing and deploying the web site.
   \item Participated in the implementation of a Single Sign--On solution for
-    the 3DG Platform (forum, blogs, news site, profiles, etc.) using the
-    Central Authentication Service
+    the 3DG Platform using the Central Authentication Service
     (\weblink{http://en.wikipedia.org/wiki/Central_Authentication_Service}{CAS})
     protocol. Tools used:
     \weblink{https://github.com/relevance/castronaut}{castronaut},
@@ -124,8 +122,7 @@ in projects such as small websites development.}
 \cventry{2010}{Undergrad Teaching Assistant}
 {Universidad de Buenos Aires}{Buenos Aires, Argentina}{}{%
 \begin{itemize}%
-  \item ``Algorithms and Programming I''
-  \item ``Algorithms and Programming II''
+  \item ``Algorithms and Programming I'' and ``Algorithms and Programming II''.
 \end{itemize}
 }
 %
@@ -142,45 +139,76 @@ Aires, Argentina}{}{%
 Participated in a team developing Java applications, and
 worked as an internal and external consultant.
 \begin{itemize}
-  \item Member of a team involved in the development of a workflow based web
-    application to track and optimize the Procurement Process of the
-    \weblink{http://www.telefonica.com/}{``Grupo Telefónica''} in Argentina.
-    Tools used: jBPM, Tapestry, Spring, Hibernate, HttpUnit (for web scraping).
+  \item Developed a workflow based web application to track and optimize the
+    Procurement Process of the \weblink{http://www.telefonica.com/}{``Grupo
+    Telefónica''} in Argentina.  Tools used: jBPM, Tapestry, Spring, Hibernate,
+    HttpUnit (for web scraping).
   \item Implemented prototype applications on J2EE in order to evaluate the
-    adoption of different technologies (Tapestry, JavaServer Faces, Hibernate,
-    Spring and Mule).
-  \item Elaborated slides and examples to be used in technical talks.
+    adoption of different technologies (JavaServer Faces and Mule).
 \end{itemize}
 }
-%
-\cventry{2007\\ Apr -- Jun}{Security Analyst}
-{\weblink{http://www.novared.cl/}{Novared S.A.} working at %
-\weblink{http://www.telecom.com.ar/}{Telecom Argentina S.A.}}{Buenos Aires,
-Argentina}{}{%
-Implemented the security product Novell Sentinel,  providing integrated
-monitoring of more than 200 devices, in order to improve Sarbanes--Oxley
-compliance.
-\begin{itemize}
-  \item Developed agents in Novell Sentinel's proprietary language.
-  \item Developed connectors responsible of collecting and transferring logs
-    and events from different services to the agents, using Perl, Bash and
-    J2SE.
-\end{itemize}
+
+% \section{Profile} Versatile \& pragmatic developer with strong theoretical
+% knowledge and practical experience ranging from system programming in
+% low--level languages to graphic and web applications in high--level
+% languages. Interested in developing for mobile platforms (specially for
+% Android).
+
+% Proactive, self--taught, quick--learner, goal oriented. Able to work
+% effectively both as part of small/big teams as well as alone on own
+% motivation.  Deep understanding and use of FLOSS (Free Libre Open Source
+% Software) development methodologies and tools. Used to working under pressure
+% and meeting demanding deadlines.
+
+\section{Technical Skills}
+\cvskill{Proficient in:}{Java, Python, GNU/Linux.}
+\cvskill{Acquainted with:}{Ruby, C, C++, JavaScript, SQL, HTML, CSS.}
+\cvline{Worked with:}{%
+  \begin{minipage}[t]{\linewidth}\small
+    \begin{itemize}
+      \item Google Proprietary Technology.
+      \item Android SDK.
+      \item Ruby On Rails, RSpec, jQuery, jQuery UI.
+      \item Perforce, git, darcs, svn, Mercurial.
+      \item Bash, Eclipse, Vim, JUnit, Apache 2, Apache Tomcat, MySQL.
+    \end{itemize}
+  \end{minipage}
 }
+\cvskill{OOP}{Experienced in Object--oriented design and programming. Knowledge
+of Design Patterns and UML.}
+% \begin{itemize}
+% \item Deep web development knowledge, ranging from back--end programming in
+% Ruby, Java and PHP, to front--end programming using JavaScript and HTML + CSS.
+% Knowledge of back--end frameworks (Rails, Tapestry) and front--end libraries
+% (jQuery, jQuery UI). Prefer back--end rather than front--end programming.
+% \item Object--oriented design and programming.
+% \item Strong practical knowledge of Java, Ruby, C++ and C.
+% \item Experience teaching programming with Python and using it to make small
+% programs and utilities.
+% \item Concurrent and network programming, including POSIX threads, BSD sockets,
+% TCP/IP and POSIX IPC (Inter--Process Communication) experience.
+% \item GNU/Linux systems specialist. More than 10 years of experience as user
+% and administrator. Knowledge about its architecture, best--practices, shell
+% scripting,  and web (Apache 2, Tomcat) \& database (MySQL) servers
+% administration.
+% \item Practical and theoretical knowledge of networking protocols (IP, TCP/IP,
+% UDP, etc.) and application protocols over IP (HTTP, SMTP, POP 3, DNS, etc.).
+% \item Network administration: firewalling (iptables), advanced routing, NAT.
+% \item Basic knowledge of the Android SDK and mobile programming.
+% \end{itemize}
 
 \section{Contributions to FLOSS Projects}
 \cvline{}{Contributed to popular FLOSS (Open--Source) projects including:}
-
 \cvlistdoubleitem{\mbox{\weblink{http://mercurial.selenic.com/}{Mercurial}}}{%
 \mbox{\weblink{http://ace.ajax.org/}{ACE (Ajax.org Text Editor)}}}
 \cvlistitem{\mbox{\weblink{http://github.com/fesplugas/typus}{Typus}}}
 
 \section{Personal Projects}
 \cvskill{\mbox{\weblink{https://github.com/gkleiman/wide}{wIDE}}\\2010 --
-now}{wIDE $[$Rails 3, jQuery, jQuery UI, delayed\_jobs, Mercurial, git$]$ is a
-web IDE that runs in the browser, but lives in a server. It was developed for
-the \weblink{http://labi.fi.uba.ar/club_robotica.html}{Robotics Club} of the
-Faculty of Engineering of the UBA, and allows them to edit and compile
+current}{wIDE $[$Rails 3, jQuery, jQuery UI, delayed\_jobs, Mercurial, git$]$
+is a web IDE that runs in the browser, but lives in a server. It was developed
+for the \weblink{http://labi.fi.uba.ar/club_robotica.html}{Robotics Club} of
+the Faculty of Engineering of the UBA, and allows them to edit and compile
 programs for different microcontroller architectures from anywhere, anytime. It
 allows the versioning of the projects using Mercurial.}
 \cvskill{\mbox{\weblink{http://yanf.sourceforge.net/}{yanf}}\\2001}{Yanf
@@ -188,24 +216,13 @@ $[$C$]$ is a deprecated news fetcher coded by me, when I was 16 and web RSS
 readers were not popular. It was published under the GPL v2 license, but is no
 longer functional and is still available only for nostalgic reasons.}
 
-\section{Languages}
-\cvlanguage{Spanish}{Native}{}
-\cvlanguage{English}{Fluent}{First Certificate Exam (passed with grade A),
-Cambridge, 2001}
-\cvlanguage{German}{Fluent}{Deutsches Sprachdiplom der KMK Stufe II, 2002}
-
 \section{Awards}
 \cventry{2008}{ALEARG Scholarship}{}{granted by the German Academic Exchange
 Service (DAAD) to do research work at the TU Braunschweig}{Germany}{}{}{}{}
-\cventry{2001}{Argentine Chemistry Olympiads (OAQ)}{Bronze medal}{}{}{}{}
+\cventry{2001}{Argentinian National Olympiad of Chemistry (OAQ)}{Bronze medal}{}{}{}{}
 
 \section{Hobbies}
-\cvlistitem{Travelling, active member of
-\weblink{http://couchsurfing.org}{CouchSurfing}, take almost any opportunity to
-travel.}
-\cvlistitem{Cooking.}
-\cvlistitem{Film Geek, owner of a large constantly growing library of movies.}
+\cvlistitem{Cinema, Photography and Cooking.}
 \cvlistitem{Tweaking and tunning my development environment, constantly
 discovering new features in my favourite editor (Vim) and trying new tools.}
-\cvlistitem{Document composition with \LaTeX.}
 \end{document}
