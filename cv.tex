@@ -1,47 +1,33 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and
 % 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{classic}
+\moderncvcolor{blue}
+\moderncvstyle{classic}
 
-\setlength{\hintscolumnwidth}{0.17\textwidth}
-\recomputelengths
+\sethintscolumnlength{0.26\textwidth}
 
 % for web links
 \definecolor{href}{rgb}{0.2,0.4,0.65}
 \newcommand\weblink[2] {{\color{href} \href{#1}{#2}}}
-\newcommand\cvskill[2] {\cvline{#1}{
-\begin{minipage}[t]{%
-  \linewidth}\small #2
-\end{minipage}
-}}
 
 % character encoding
 \usepackage[utf8]{inputenc}
 
 % adjust the page margins
 \usepackage[scale=0.85]{geometry}
-% if you want to change the width of the column with the dates
-%\setlength{\hintscolumnwidth}{3cm}
-% only for the classic theme, if you want to change the width of your name
-% placeholder (to leave more space for your address details)
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
-% required when changes are made to page layout lengths
-\AtBeginDocument{\recomputelengths}
 
 % personal data
-\firstname{Gastón}
-\familyname{Kleiman}
+\name{Gastón}{Kleiman}
 \title{Software Engineer}
-\address{c/o Müller Lohidoy\\Herrfurthstraße 33}{12049 Berlin, Deutschland}
-\mobile{+49 152-01391500}
+\address{c/o Müller Lohidoy\\Herrfurthstraße 33\\12049 Berlin}{Deutschland}
+\phone[mobile]{+49 152-01391500}
 \email{gaston.kleiman@gmail.com}
-\homepage{github.com/gkleiman}
+\social[github]{gkleiman}
+\social[linkedin]{gkleiman}
 \extrainfo{Nationality: German and Argentine Citizenships}
 % \quote{Some quote (optional)}
-
-% uncomment to suppress automatic page numbering for CVs longer than one page
 
 \nopagenumbers{}
 
@@ -55,7 +41,7 @@ Buenos Aires}{Argentina}{}{Final Project:
 Environment).}
 \cventry{2008 -- 2009\\ Sep -- Feb}{Research Project at the
 \weblink{http://www.ibr.cs.tu-bs.de/dus/index.html}{Institute of Distributed
-and Ubiquitous Systems}}{Technische Universität
+and Ubiquitous Systems}}{Techni-sche Universität
 Braunschweig}{Germany}{}{Participated in a research project on collaborative
 transmission in wireless sensor networks using feedback based distributed
 adaptive beamforming.\\Simulated and evaluated different synchronization and
@@ -117,11 +103,10 @@ monitor credit exposure and revenue risk.
     \weblink{https://wiki.jasig.org/display/CASC/phpCAS}{phpCAS}.
   \item Installed and configured multiple GNU/Linux servers. Responsible for
     emergency response in case of failures.
-  \item Participated in the hiring process interviewing candidates.
 \end{itemize}
 }
 %
-\cventry{2007 -- 2008\\ Jul -- Aug}{Java Developer / Consultant}
+\cventry{2007 -- 2008\\ Jul -- Aug}{Java Developer/Consultant}
 {\weblink{http://www.newtechnologies.com.ar}{New Technologies S.R.L.}}{Buenos
 Aires, Argentina}{}{%
 Participated in a team developing Java applications, and
@@ -149,9 +134,9 @@ worked as an internal and external consultant.
 % and meeting demanding deadlines.
 
 \section{Technical Skills}
-\cvskill{Proficient in:}{Java, Python, GNU/Linux.}
-\cvskill{Acquainted with:}{Ruby, CoffeeScript, JavaScript, C, C++, SQL, HTML, CSS.}
-\cvline{Worked with:}{%
+\cvitem{Proficient in:}{Java, Python, GNU/Linux.}
+\cvitem{Acquainted with:}{Ruby, CoffeeScript, JavaScript, C, C++, SQL, HTML, CSS.}
+\cvitem{Worked with:}{%
   \begin{minipage}[t]{\linewidth}\small
     \begin{itemize}
       \item Ruby On Rails, RSpec, jQuery, jQuery UI.
@@ -164,7 +149,7 @@ worked as an internal and external consultant.
     \end{itemize}
   \end{minipage}
 }
-\cvskill{OOP}{Experienced in Object--oriented design and programming. Knowledge
+\cvitem{OOP}{Experienced in Object--oriented design and programming. Knowledge
 of Design Patterns and UML.}
 % \begin{itemize}
 % \item Deep web development knowledge, ranging from back--end programming in
@@ -188,27 +173,27 @@ of Design Patterns and UML.}
 % \end{itemize}
 
 \section{Languages}
-\cvlanguage{English}{Fluent}{First Certificate Exam (passed with grade A),
-Cambridge, 2001}
-\cvlanguage{German}{Advanced}{Deutsches Sprachdiplom der KMK Stufe II, 2002}
-\cvlanguage{Spanish}{Native}{}
+\cvitemwithcomment{English}{Fluent}{First Certificate Exam (passed with grade
+A), Cambridge, 2001}
+\cvitemwithcomment{German}{Advanced}{Deutsches Sprachdiplom der KMK Stufe II,
+2002}
+\cvitemwithcomment{Spanish}{Native}{}
 
 \section{Contributions to FLOSS Projects}
-\cvline{}{Contributed to popular FLOSS (Open--Source) projects including:}
+\cvitem{}{Contributed to popular FLOSS (Open--Source) projects including:}
 \cvlistdoubleitem{\mbox{\weblink{http://mercurial.selenic.com/}{Mercurial}}}{%
 \mbox{\weblink{http://ace.ajax.org/}{ACE (Ajax.org Text Editor)}}}
 \cvlistdoubleitem{\mbox{\weblink{http://github.com/fesplugas/typus}{Typus}}}{%
 \mbox{\weblink{https://github.com/linkedin/Backbone.TableView}{Backbone.Tableview}}}
 
 \section{Personal Projects}
-\cvskill{\mbox{\weblink{https://github.com/gkleiman/wide}{wIDE}}\\2010 --
-current}{wIDE $[$Rails 3, jQuery, jQuery UI, delayed\_jobs, Mercurial, git$]$
+\cvitem{\mbox{\weblink{https://github.com/gkleiman/wide}{wIDE}}\\2010}{wIDE $[$Rails 3, jQuery, jQuery UI, delayed\_jobs, Mercurial, git$]$
 is a web IDE that runs in the browser, but lives in a server. It was developed
 for the \weblink{http://labi.fi.uba.ar/club_robotica.html}{Robotics Club} of
 the Faculty of Engineering of the UBA, and allows them to edit and compile
 programs for different microcontroller architectures from anywhere, anytime. It
 allows the versioning of the projects using Mercurial.}
-\cvskill{\mbox{\weblink{http://yanf.sourceforge.net/}{yanf}}\\2001}{Yanf
+\cvitem{\mbox{\weblink{http://yanf.sourceforge.net/}{yanf}}\\2001}{Yanf
 $[$C$]$ is a deprecated news fetcher coded by me, when I was 16 and web RSS
 readers were not popular. It was published under the GPL v2 license, but is no
 longer functional and is still available only for nostalgic reasons.}
